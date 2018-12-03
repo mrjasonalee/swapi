@@ -1,0 +1,16 @@
+<h1>
+  Star Wars!!! {{ title }}
+</h1>
+<form (ngSubmit)='search(menu, getData)'>
+
+  <hr>
+  <select [(ngModel)] = "menu" name="menu">
+    <!-- <option [(ngModel)]="submit" name="submit"></option> -->
+    <option value="films">Films</option>
+    <option value="people">People</option>
+    <option value="starships">Ships</option>
+  </select>
+  <input Input type="text" [(ngModel)] = "getData" name = "getData" class="searchBar">
+  <button type = "submit">Submit</button>
+</form>
+<p>{{ data | json }}</p>
